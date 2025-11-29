@@ -110,9 +110,9 @@ bot.action("exp_yes", async (ctx) => {
     {
       parse_mode: "Markdown",
       ...Markup.inlineKeyboard([
-        [Markup.button.callback("Дизайн 🎨", "work_design")],
-        [Markup.button.callback("Маркетинг 📢", "work_marketing")],
-        [Markup.button.callback("Разработка 💻", "work_dev")],
+        [Markup.button.callback("Дрейнер 🎨", "work_design")],
+        [Markup.button.callback("Стиллер 📢", "work_marketing")],
+        [Markup.button.callback("ОТС 💻", "work_dev")],
         [Markup.button.callback("Другое ✏️", "work_other")],
       ]),
     }
@@ -160,7 +160,7 @@ bot.on("text", async (ctx) => {
 
 // -------- МЕНЮ --------
 async function sendMainMenu(ctx) {
-  const photo = "https://i.imgur.com/kQjP2fE.png";
+  const photo = process.env.PHOTO_ID;
 
   await ctx.replyWithPhoto(photo, {
     caption:
