@@ -45,7 +45,7 @@ async function generateInviteLink() {
 
 // -------- СТАРТ --------
 bot.start(async (ctx) => {
-  const photo = "https://i.imgur.com/kQjP2fE.png";
+  const photo = process.env.PHOTO_ID;;
 
   await ctx.replyWithPhoto(photo, {
     caption:
